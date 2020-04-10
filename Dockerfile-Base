@@ -11,7 +11,7 @@ ENV M2_HOME=/usr/local/apache-maven/apache-maven-${Mvn_Version}
 ENV M2="${M2_HOME}/bin"
 ENV PATH=$PATH:$M2
 
-RUN wget https://downloads.apache.org/maven/maven-3/${Mvn_Version}/binaries/apache-maven-${Mvn_Version}-bin.tar.gz && \
+RUN wget http://archive.apache.org/dist/tomcat/tomcat-8/v${Tomcat_Version}/bin/apache-tomcat-${Tomcat_Version}.tar.gz  && \
     tar xvfz apache-maven-${Mvn_Version}-bin.tar.gz && \
     mkdir /usr/local/apache-maven/apache-maven-${Mvn_Version} -p && \
     mv apache-maven-${Mvn_Version}/* /usr/local/apache-maven/apache-maven-${Mvn_Version}/
